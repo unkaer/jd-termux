@@ -44,24 +44,20 @@ export JD_CASH_SHARECODES="cklmPqvgJw@eU9Ya-2yZfl19GzTzXcW1g@eU9Yabm0NfUvpG3Vwic
 
 name1=$1
 name2=$2
-echo "-*-*-*-*-分割线-*-*-*-*-"
-date
+$(date "+%Y-%m-%d %H:%M:%S")
 if [ $name1 ];
 then
   if [ $name1 ];
   then
-    echo "开始运行"${name1}"-"${name2}
-    echo "nohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &"
+    echo -e "-*-*-*-*-分割线-*-*-*-*-\n"$(date '+%Y-%m-%d %H:%M:%S')"\n开始运行"${name1}"-"${name2}"\nnohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &\n-----------------------"
     nohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &
   else
-    echo "可能运行"${name1}
-    echo "nohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &"
+    echo -e "-*-*-*-*-分割线-*-*-*-*-\n"$(date '+%Y-%m-%d %H:%M:%S')"\n开始运行"${name1}"\nnohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &\n-----------------------"
     nohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &
   fi
 else
-  echo  "没有传入参数"
+  echo -e "-*-*-*-*-分割线-*-*-*-*-\n"$(date '+%Y-%m-%d %H:%M:%S')"\n没有传入参数\n-----------------------"
 fi
-echo "-----------------------"
 
 
 
