@@ -105,9 +105,9 @@
 # 京喜签到
 0 16 * * * ~/jd/3.设置环境变量.sh jx_sign 京喜签到 >> ~/jd/logs/3.运行记录.log 2>&1
 # 在线每分钟检测
-*/1 * * * * date >> ~/jd/logs/2.在线检测.log 2>&1
+#*/1 * * * * date >> ~/jd/logs/2.在线检测.log 2>&1
 ### 运行记录
-*/1 * * * * ~/jd/3.设置环境变量.sh >> ~/jd/logs/3.运行记录.log 2>&1&&date >> ~/jd/logs/3.运行记录.log 2>&1
+#*/1 * * * * ~/jd/3.设置环境变量.sh >> ~/jd/logs/3.运行记录.log 2>&1&&date >> ~/jd/logs/3.运行记录.log 2>&1
 # 清理昨天的日志
 30 5 * * * rm -rf ~/jd/logs && mkdir ~/jd/logs
 ### 用不上
