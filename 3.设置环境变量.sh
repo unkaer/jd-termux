@@ -49,8 +49,8 @@ if [ $name1 ];
 then
   if [ $name1 ];
   then
-    echo -e "-*-*-*-*-分割线-*-*-*-*-\n"$(date '+%Y-%m-%d %H:%M:%S')"\n开始运行"${name1}"-"${name2}"\nnohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &\n-----------------------"
-    nohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &
+    echo -e "-*-*-*-*-分割线-*-*-*-*-\n"$(date '+%Y-%m-%d %H:%M:%S')"\n开始运行"${name1}"-"${name2}"\nnohup node ~/jd/${name1}.js ${name2} >> ~/jd/logs/${name1}.log 2>&1 &\n-----------------------"
+    nohup node ~/jd/${name1}.js ${name2} >> ~/jd/logs/${name1}.log 2>&1 &
   else
     echo -e "-*-*-*-*-分割线-*-*-*-*-\n"$(date '+%Y-%m-%d %H:%M:%S')"\n开始运行"${name1}"\nnohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &\n-----------------------"
     nohup node ~/jd/${name1}.js >> ~/jd/logs/${name1}.log 2>&1 &
