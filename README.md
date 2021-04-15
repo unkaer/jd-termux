@@ -63,3 +63,8 @@ crond
 ```sh
 echo crond >> ~/.bashrc
 ```
+
+`termux` 添加到忽略电池优化
+```sh
+termux-wake-lock
+```
